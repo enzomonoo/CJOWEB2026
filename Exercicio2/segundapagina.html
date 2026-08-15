@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+</head>
+<body style="background-color: black; color:rgb(193, 193, 193)";>
+    <h1>Segunda Página do Website</h1>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum odio molestias eveniet vitae debitis suscipit.
+    <br>
+    <h2>Formulários desejados</h2>
+    <form>
+        <p>
+            <label for="nome"></label><b>Nome</b></label>
+            <input required type="text" size="35" id="nome" name="nome" autocapitalize="nome" enterkeyhint="next">
+        </p>
+        <p>
+            <label for="dataDeNascimento"><b>Data De Nascimento : </b></label>
+            <input type="date" id="dataDeNascimento" name="dataDeNascimento">
+        </p>
+        <p>
+            <b>Sexo:</b>
+            <br>
+            <label for="masculino">Masculino</label>
+            <input type="radio" id="masculino" name="radio" value="masculino">
+            <br>
+            <label for="masculino">Feminino</label>
+            <input type="radio" id="feminino" name="radio" value="feminino">
+            <br>
+            <label for="masculino">Outro...:</label>
+            <input type="text" id="outro" name="radio">
+        </p>
+        <p>
+            <b>Endereço : </b><br>
+            <label for="rua">Rua :</label>
+            <input required type="text" id="rua" size="35" name="rua" autocapitalize="rua" enterkeyhint="next">
+            <br>
+            <label for="rua">Número :</label>
+            <input required type="number" min="1" max="9999" size="3" id="numero" name="numero" enterkeyhint="next">
+            <br>
+            <label for="rua">Bairro :</label>
+            <input required type="text" id="rua" name="rua" autocapitalize="rua" enterkeyhint="next">
+            <br>
+            <label for="estado">Estado : </label>
+            <select name="estado" id="estado">
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espirito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PB">Paraiba</option>
+                <option value="PA">Pará</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RD">Rondônia</option>
+                <option value="RM">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+        </select>
+        <br>
+        <label for="cidade">Cidade : </label>
+        <select name="cidade">
+                <option value="cidade1">Cidade 1</option>
+                <option value="cidade2">Cidade 2</option>
+                <option value="cidade3">Cidade 3</option>
+                <option value="cidade4">Cidade 4</option>
+        </select>
+        </p>
+        <p>
+            <label for="email" ><b>E-mail : </b></label>
+            <input size="31" type="email" id="email" name="email">                
+        </p>
+        <p>
+            <label for="telefone">Telefone : </label>
+            <input type="tel" id="telefone" name="telefone" placeholder="+55 (00) 00000-0000">
+        </p>
+        <p>
+            <label for="range">Telefone 2 : </label>
+            <input type="range" value="24" min="1" max="129999999" oninput="this.nextElementSibling.value = this.value">
+            <output>24</output>
+        </p>
+        <p>
+            <b>Area(s) de Interesse : </b><br>
+            <label for="checkbox">Computação</label>
+            <input type="checkbox" id="checkbox" name="computacao">
+            <br>
+            <label for="checkbox">Engenharia</label>
+            <input type="checkbox" id="checkbox" name="engenharia">
+            <br>
+            <label for="checkbox">História</label>
+            <input type="checkbox" id="checkbox" name="historia">
+        </p>
+        <br>
+        <br>
+        <br>
+        <p>
+            <label for="nome">Usuário :</label>
+            <input type="text" id="user" name="user">
+        </p>
+        <p>
+            <label for="senha">Senha : </label>
+            <input type="password" id="senha" name="senha">
+        </p>
+        <p>
+            <label for="enviar">Enviar</label>
+            <input type="submit" name="enviar" id="enviar">
+        </p>
+    </form> 
+    <br>
+
+    <table border="4">
+        <thead>
+            <th></th>
+            <th colspan="3">Links de Navegação</th>
+            <th></th>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td colspan="3">
+                    <a href="exercicio2.html">Link para o Menu Principal</a>
+                </td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

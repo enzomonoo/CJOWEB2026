@@ -10,7 +10,7 @@
 
     <hr>
     
-    <table border="4">
+    <table border="4"><!--Tabela Simples-->
         <tr>
             <td>Computador</td>
             <td>Placa de Vídeo</td>
@@ -24,8 +24,9 @@
             <td>Memória</td>
         </tr>
     </table>
+    <br>
 
-    <table border="4">
+    <table border="4"><!--Tabela Com Título e Colunas em Negrito-->
         <caption>Tabela de Clientes</caption>
         <tr>
             <th>Código</th>
@@ -48,5 +49,73 @@
             <td>(12) 91250-2952</td>
         </tr>
     </table>
+    <br>
+
+    <table border="4"><!--Tabela Com Mesclagem de Células-->
+        <tr>
+            <th colspan="3">Tabela de Produtos</th>
+        </tr>
+        <tr>
+            <td>Categoria</td>
+            <td>Produto</td>
+            <td>Preço</td>
+        </tr>
+        <tr>
+            <td rowspan="3">Periféricos</td>
+            <td>Headphone</td>
+            <td>R$290,90</td>
+        </tr>
+        <tr>
+            <td>Mouse</td>
+            <td>R$189,90</td>
+        </tr>
+        <tr>
+            <td>Teclado</td>
+            <td>R$559,90</td>
+        </tr>
+    </table>
+    <br>
+    
+    <table border="4"><!--Tabela Com Divisão de Partes-->
+        <thead>
+            <tr>
+                <th rowspan="2">Produto</th>
+                <th colspan="2">Preço</th>
+                <th rowspan="2">Cor</th>
+            </tr>
+            <tr>
+                <th>À Vista</th>
+                <th>À Prazo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Camisa</td>
+                <td>R$25,00</td>
+                <td>R$30,00</td>
+                <td>Azul</td>
+            </tr>
+            <tr>
+                <td>Calça</td>
+                <td>R$60,00</td>
+                <td>R$75,00</td>
+                <td>Verde</td>
+            </tr>
+            <tr>
+                <td>Blazer</td>
+                <td>R$190,00</td>
+                <td>R$279,90</td>
+                <td>Preto</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="4">Preços Sujeitos à Mudança<br>Consulte um do nossos vendedores</th>
+            </tr>
+        </tfoot>
+    </table>
+    <br>
+
+
 </body>
 </html>
