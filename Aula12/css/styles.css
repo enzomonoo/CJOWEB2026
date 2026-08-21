@@ -1,0 +1,10 @@
+body {
+    color: orange;
+    background-color: rgb(17, 11, 8);
+    font-size: 18px;
+}
+h1 {
+    color : yellow;
+    font-size: 20;
+    font-family: sans-serif;
+}
