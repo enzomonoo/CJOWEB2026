@@ -1,0 +1,44 @@
+body{
+    width: hw;
+    background-color: rgb(27, 10, 10);
+    color: red;
+    -webkit-text-stroke: 1px orange;
+}
+a{
+    -webkit-text-stroke: 0px red;
+    color: darkred;
+}
+h1{
+    text-align: center;
+}
+p{
+    text-align: center;
+    -webkit-text-stroke: 1px red;
+}
+img{
+    border: 5px dotted yellow;
+    align-content: center;
+}
+input{
+    -webkit-text-stroke: white;
+    color: aliceblue;
+    background-color: tomato;
+}
+table{
+    border: dotted green;
+}
+image{
+    border: 2px solid blue;
+}
+aside{
+    color: yellow;
+    margin-left: 100px;
+    text-align: left;
+    align-content: flex;
+}
+header{
+    background-color: black;
+    font-size: larger;
+    text-align: center;
+    align-content: center;
+}

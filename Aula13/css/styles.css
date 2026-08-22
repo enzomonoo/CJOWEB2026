@@ -53,11 +53,10 @@ p {
 }
 
 aside{
-
-    align-items:safe;
-    display:grid;
-    place-items: left;
-    justify-content: left;
+    width: 30%;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: right;
 }
 
 .um{
