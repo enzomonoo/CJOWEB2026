@@ -1,0 +1,58 @@
+body{
+    background-color: darkblue;
+}
+
+/*Positionamento*/
+div{
+    width: 400px;
+    height: 300px;
+    background-color: blue;
+    position: relative;
+    color: midnightblue;
+    top: 50%;
+    left: 0%;
+    transition: transform 0.5s;
+}
+div p{
+    margin-left: 44px;
+}
+#container{
+    width: 100%;
+    margin: 0 auto;
+}
+
+img{
+    position: relative;
+    top: 15%;
+    bottom: 100%;
+    right: 0px;
+}
+
+.um{
+    margin-left: 15px;
+    float: left;
+    transform: translate(-75%, 50%);
+}
+
+.um:hover{
+    color: red;
+    transform: translate(-5%, 50%);
+}
+
+.dois{
+    float: right;
+    transform: translate(98%, 50%);
+}
+
+.dois:hover{
+    transform: translate(5%, 50%)
+}
+
+.tres{
+    float: top;
+    transform: translate(150%, -99%);
+}
+
+.tres:hover{
+    transform: translate(150%, -3%)
+}
