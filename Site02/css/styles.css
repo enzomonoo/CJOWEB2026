@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Caacupe+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+a{
+    color: rgb(169, 135, 250);
+    line-height: 1.5;
+}
+
+h2{
+    padding-left: 10px;
+    color: rgb(149, 120, 186);
+}
+
+header{
+    background-color: rgb(46, 2, 87);
+    text-align: right;
+    padding: 25px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li a{
+    color: aliceblue;
+    text-transform: capitalize;
+    display: block;
+    text-align: center;
+    margin-bottom: 3px;
+    line-height: 2;
+    transition: 0.5s;
+}
+li a:hover{
+    background-color: azure;
+    color:rgb(87, 48, 197);;
+}
+
+body{
+    font-family: "Caacupe One", sans-serif;
+    font-style: normal;
+    background-color: rgb(6, 5, 10);
+}
+
+.principal{
+    line-height: 1.5;
+    padding-left: 10px;
+    background-color: rgb(87, 48, 197);
+    width: 1240px;
+    float: right;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.auxiliar{
+    background-color: rgb(41, 0, 128);
+    width: 200px;
+    float: left;
+}
+
+.auxiliar h2{
+    text-align: center;
+}
+
+img{
+    width: 200px;
+    transition: 0.5s;
+}
+
+footer{
+    float: bottom;
+    background-color: blue;
+    text-align: center;
+}
+
+img:hover{
+    transform: rotate(360deg);
+}

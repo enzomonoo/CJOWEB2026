@@ -53,6 +53,6 @@ img{
     transform: translate(150%, -99%);
 }
 
-.tres:hover{
+.tres:focus{
     transform: translate(150%, -3%)
 }

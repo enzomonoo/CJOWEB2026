@@ -1,0 +1,11 @@
+#container{
+    border: 1px solid black;
+    width: 1000px;
+    margin: 0 auto;
+}
+h1{
+    margin-bottom: 30px;
+}
+h2{
+    margin-bottom: 20px;
+}
