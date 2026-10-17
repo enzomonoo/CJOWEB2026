@@ -1,0 +1,75 @@
+:root{
+    --preto : #1B2021;
+	--cinza : #30343F;
+	--vermelho : #89023E;
+	--rosa : #EA638C;
+    --branco : #FFD9DA;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body{
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    margin: 0;
+    color : var(--branco);
+    background-color: var(--cinza);
+    min-height: 200vh;
+}
+
+
+.navbar-vidro {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background:var(--preto);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 1px solid var(--cinza);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    z-index: 1000;
+}
+
+a{
+    color: var(--rosa);
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+a:hover{
+    color:var(--branco)
+}
+
+.logo{
+    fill: var(--preto);
+    stroke: var(--rosa);
+    stroke-width:2;
+    transition: all 0.5s ease;
+}
+
+.icone-botao{
+    background: transparent;
+    border: none;
+    color: #cbd5e1;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    transition: all 0.5s ease;
+    fill: var(--preto);
+    stroke: var(--rosa);  
+
+}
+
+.icone-botao:hover {
+    fill: var(--cinza);
+    stroke: var(--branco);
+}
