@@ -6,6 +6,13 @@
     --branco : #FFD9DA;
 }
 
+@font-face{
+    font-family: "FonteLogo";
+    src: url(../Parallel-wVj3.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -24,8 +31,8 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    height: 60px;
-    background:var(--preto);
+    height: 10vh;
+    background: rgba(27, 32,33, 0.75);
     backdrop-filter: saturate(180%) blur(20px);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     border-bottom: 1px solid var(--cinza);
@@ -40,18 +47,32 @@ a{
     color: var(--rosa);
     font-weight: bold;
     text-decoration: none;
-    transition: color 0.5s ease;
+    
 }
 
-a:hover{
+.navbar-vidro a{
+    transition: color 0.5s;
+}
+
+.navbar-vidro a:hover{
     color:var(--branco)
+}
+
+.links-nav{
+    font-size: 2vw;
+    display: flex;
+    gap: 2.5vw;
+    transition: color 0.25s;
+}
+.links-nav a:hover{
+    color: var(--branco);   
 }
 
 .logo{
     fill: var(--preto);
     stroke: var(--rosa);
-    stroke-width:2;
-    transition: all 0.5s ease;
+    stroke-width:3;
+    transition: all 0.5s;
 }
 
 .icone-botao{
@@ -63,7 +84,7 @@ a:hover{
     justify-content: center;
     align-items: center;
     padding: 0;
-    transition: all 0.5s ease;
+    transition: all 0.5s;
     fill: var(--preto);
     stroke: var(--rosa);  
 
@@ -72,4 +93,154 @@ a:hover{
 .icone-botao:hover {
     fill: var(--cinza);
     stroke: var(--branco);
+}
+
+.acoes-nav{
+    display: flex;
+    gap: 16px;
+}
+
+.espacador-conteudo{
+    margin: 3%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.espacador-conteudo h1{
+    font-family: "FonteLogo";
+    color: var(--rosa);
+    font-size: 15vw;
+    margin: 0;
+    text-shadow: 1.25vh 1.25vw 10px var(--preto);
+}
+
+.espacador-conteudo p{
+    margin-bottom: 10vh;
+    font-size: 1.25rem;
+    color: var(--branco);
+    text-shadow: 0 4px 10px var(--preto);
+    max-width: 120vw;
+}
+
+.display-discos{
+    width: min(100% - 5%, 400vw);
+    margin: 4vh auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+}
+
+.titulo-display{
+    font-family: "FonteLogo";
+    color: var(--rosa);
+    font-size: 3vw;
+    margin: 0 0 0 2vw;
+    text-shadow: 0.5vh 0.5vw 1vh var(--preto);
+}
+
+.card-disco {
+    overflow: hidden;
+    color: var(--branco);
+    background: var(--preto);
+    border: 1px solid var(--cinza);
+    border-radius: 12px;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+    box-shadow: 2vh 1vw 2vh var(--preto);
+}
+
+
+.card-disco:hover {
+    transform: translateY(-5px) translateX(-5px);
+    border-color: var(--rosa);
+}
+
+.capa-disco {
+    position: relative;
+    display: block;
+    aspect-ratio: 1;
+    overflow: hidden;
+}
+
+.capa-disco img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.35s ease;
+}
+/* Zoom da arte do album*/
+/* .card-disco:hover .capa-disco img {
+    transform: scale(1.10);
+} */
+
+.selo-disco {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 5px 9px;
+    color: var(--preto);
+    background: var(--rosa);
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.info-disco {
+    padding: 10px;
+}
+
+.artista-disco, .formato-disco {
+    margin: 0;
+    padding: 2%;
+    color: var(--branco);
+    font-size: 0.9rem;
+}
+
+.info-disco h2 a{
+    color: var(--rosa);
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-disco a {
+    padding: 0%;
+    color: var(--branco);
+}
+
+.rodape-card {
+    display: flex;
+    align-items: center;    
+    gap: 12px;
+    margin-top: 0.5em;
+}
+
+.preco-disco {
+    padding: 2%;
+    color: var(--branco);
+    font-weight: 700;
+    font-size: 2em;
+}
+.tags-genero {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    margin: 12px 0 0;
+    padding: 0;
+}
+
+.tags-genero li {
+    padding: 5px 9px;
+    color: var(--branco);
+    background: rgba(234, 99, 140, 0.12);
+    border: 1px solid rgba(234, 99, 140, 0.45);
+    border-radius: 999px;
+    font-size: 0.75rem;
+    line-height: 1.2;
 }

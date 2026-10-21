@@ -7,50 +7,254 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar-vidro">
-            <!-- Logo -->
-            <a href="#">
-                <div class="logo-nav">
-                    <svg width="44" height="44">
-                        <rect x="2" y="2" rx="2" ry="2" width="40" height="40" class="logo"/>
-                        <circle cx="22" cy="22" r="20" class="logo"/>
-                        <path d="M22 2 L22 40 L40 20 L22 20" class="logo"/>
-                    </svg>
-                </div>
+    <nav class="navbar-vidro">
+        <!-- Logo -->
+        <a href="#">
+            <div class="logo-nav">
+                <svg width="44" height="44">
+                    <rect x="2" y="2" rx="2" ry="2" width="40" height="40" class="logo"/>
+                    <circle cx="22" cy="22" r="20" class="logo"/>
+                    <path d="M22 2 L22 40 L40 20 L22 20" class="logo"/>
+                </svg>
+            </div>
+        </a>
+        <!-- Links da Nav Bar -->
+        <div class="links-nav">
+            <a href="discos.html" class="item-nav">Discos</a>
+            <a href="procurar.html" class="item-nav">Procurar</a>
+            <a href="artistas.html" class="item-nav">Artistas</a>
+            <a href="generos.html" class="item-nav">Gêneros</a>
+            <a href="perfil.html" class="item-nav">Perfil</a>
+            <a href="login.html" class="item-nav">Sobre</a>
+        </div>
+        <!-- Botoes do Nav -->
+        <div class="acoes-nav">
+            <button class="icone-botao">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"/>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                </svg>
+            </button>
+            <button class="icone-botao">
+                <svg viewBox="0 0 24 24" width="20" height="20"
+                stroke-width="2">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                    <line x1="3" y1="6" x2="21" y2="6"/>
+                    <path d="M16 10a4 4 0 0 1-8 0"/>
+                </svg>
+            </button>
+        </div>
+    </nav>
+    <!-- Título da página centralizado -->
+    <div class="espacador-conteudo">
+        <h1>Lado b</h1>
+        <p>Este é um website teste, a lado b não é uma marca registrada com CPNJ, as informações apresentadas aqui são somente para apresentação do desenvolvimento do conteúdo apresentado nas matérias de CJOWEB e CJOENG do ano de 2026</p>
+    </div>
+    <!-- Cartão do disco -->
+    <h3 class="titulo-display">DESTAQUES : </h3><br>
+    <section class="display-discos" aria-label="Discos">
+        <article class="card-disco">
+            
+            <a href="produto1.html" class="capa-disco">
+                <img src="img/ParanoidBlackSabbath.jpg" alt="Capa do albúm Paranoid">
             </a>
-            <!-- Links da Nav Bar -->
-            <div class="links-nav">
-                <a href="discos.html" class="item-nav">Discos</a>
-                <a href="procurar.html" class="item-nav">Procurar</a>
-                <a href="artistas.html" class="item-nav">Artistas</a>
-                <a href="generos.html" class="item-nav">Gêneros</a>
-                <a href="perfil.html" class="item-nav">Perfil</a>
-                <a href="login.html" class="item-nav">Sobre</a>
-            </div>
-            <!-- Botoes do Nav -->
-            <div class="acoes-nav">
-                <button class="icone-botao">
-                    <svg viewBox="0 0 24 24" width="20" height="20" stroke-width="2">
-                        <circle cx="11" cy="11" r="8"/>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-                    </svg>
-                </button>
-                <button class="icone-botao">
-                    <svg viewBox="0 0 24 24" width="20" height="20"
-                    stroke-width="2">
-                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
-                        <line x1="3" y1="6" x2="21" y2="6"/>
-                        <path d="M16 10a4 4 0 0 1-8 0"/>
-                    </svg>
-                </button>
-            </div>
-        </nav>
-    </header>
+            <div class="info-disco">
+                <p class="artista-disco">Black Sabbath</p>
+                <h2><a href="produto1.html">Paranoid - 1970</a></h2>
+                <p class="detalhes-disco">LP | 12'' | Stereo | Alemanha</p>
 
-    <main>
+                <ul class="tags-genero" aria-label="Gêneros">
+                    <li>Heavy Metal</li>
+                    <li>Hard Rock</li>
+                    <li>Metal Clássico</li>
+                </ul>
 
-    </main>
+                <div class="rodape-card">
+                    <span class="preco-disco">R$149,90</span>
+                </div>
+            </div>
+        </article>
+        
+        <article class="card-disco">
+            
+            <a href="produto2.html" class="capa-disco">
+                <img src="img/ReiseReiseRammstein.jpg" alt="Capa do albúm Reise Reise">
+                <span class="selo-disco">Novo</span>
+            </a>
+            <div class="info-disco">
+                <p class="artista-disco">Rammstein</p>
+                <h2><a href="produto2.html">Reise Reise - 2004</a></h2>
+                <p class="detalhes-disco">2x LP | 12'' | Stereo | Alemanha</p>
+
+                <ul class="tags-genero" aria-label="Gêneros">
+                    <li>Metal Indústrial</li>
+                    <li>Hard Rock</li>
+                    <li>Eletrônica</li>
+                </ul>
+
+                <div class="rodape-card">
+                    <span class="preco-disco">R$199,90</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="card-disco">
+            
+            <a href="produto1.html" class="capa-disco">
+                <img src="img/TheWallPinkFloyd.jpg" alt="Capa do albúm The Wall">
+            </a>
+            <div class="info-disco">
+                <p class="artista-disco">Pink Floyd</p>
+                <h2><a href="produto1.html">The Wall - 1979</a></h2>
+                <p class="detalhes-disco">2x LP | 12'' | Stereo | EUA</p>
+
+                <ul class="tags-genero" aria-label="Gêneros">
+                    <li>Rock</li>
+                    <li>Prog Rock</li>
+                    <li>Rock Clássico</li>
+                </ul>
+
+                <div class="rodape-card">
+                    <span class="preco-disco">R$499,90</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="card-disco">
+            
+            <a href="produto1.html" class="capa-disco">
+                <img src="img/SkeletaGhost.jpg" alt="Capa do albúm Skeleta">
+                <span class="selo-disco">Novo</span>
+            </a>
+            <div class="info-disco">
+                <p class="artista-disco">Ghost</p>
+                <h2><a href="produto1.html">Skeletá - 2025</a></h2>
+                <p class="detalhes-disco">LP | 12'' | Stereo | Suécia</p>
+
+                <ul class="tags-genero" aria-label="Gêneros">
+                    <li>Rock de Arena</li>
+                    <li>Hard Rock</li>
+                    <li>Heavy Metal</li>
+                </ul>
+
+                <div class="rodape-card">
+                    <span class="preco-disco">R$349,90</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="card-disco">
+            
+            <a href="produto1.html" class="capa-disco">
+                <img src="img/GatesOfMetalFriedChickenOfDeathMassacration.jpg" alt="Capa do albúm Gates of Metal Fried Chicken of Death">
+                <span class="selo-disco">Novo</span>
+            </a>
+            <div class="info-disco">
+                <p class="artista-disco">Massacration</p>
+                <h2><a href="produto1.html">Gates of Metal Fried Chicken of Death - 2005</a></h2>
+                <p class="detalhes-disco">LP | 12'' | Mono | Brasil</p>
+
+                <ul class="tags-genero" aria-label="Gêneros">
+                    <li>Paródia</li>
+                    <li>Heavy Metal</li>
+                    <li>Rock</li>
+                </ul>
+
+                <div class="rodape-card">
+                    <span class="preco-disco">R$249,90</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="card-disco">
+            
+            <a href="produto1.html" class="capa-disco">
+                <img src="img/CurrentsTameImpala.jpg" alt="Capa do albúm Currents">
+                <span class="selo-disco">Esgotado!</span>
+            </a>
+            <div class="info-disco">
+                <p class="artista-disco">Tame Imapala</p>
+                <h2><a href="produto1.html">Currents - 2015</a></h2>
+                <p class="detalhes-disco">2x LP | 12'' | Stereo | EUA</p>
+
+                <ul class="tags-genero" aria-label="Gêneros">
+                    <li>Pop Rock</li>
+                    <li>Rock Alternativo</li>
+                    <li>Indie Pop</li>
+                </ul>
+
+                <div class="rodape-card">
+                    <span class="preco-disco">R$490,90</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="card-disco">
+            
+            <a href="produto1.html" class="capa-disco">
+                <img src="img/DemonDaysGorillaz.jpg" alt="Capa do albúm Demon Days">
+            </a>
+            <div class="info-disco">
+                <p class="artista-disco">Gorillaz</p>
+                <h2><a href="produto1.html">Demon Days - 2005</a></h2>
+                <p class="detalhes-disco">2x LP | 12'' | Stereo | Reino Unido</p>
+
+                <ul class="tags-genero" aria-label="Gêneros">
+                    <li>Eletrônica</li>
+                    <li>Hip-Hop</li>
+                    <li>Lo-Fi</li>
+                </ul>
+
+                <div class="rodape-card">
+                    <span class="preco-disco">R$169,90</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="card-disco">
+            
+            <a href="produto1.html" class="capa-disco">
+                <img src="img/GoldAbba.jpg" alt="Capa do albúm Demon Days">
+            </a>
+            <div class="info-disco">
+                <p class="artista-disco">Gorillaz</p>
+                <h2><a href="produto1.html">Gold Greatest Hits - 1992</a></h2>
+                <p class="detalhes-disco">2x LP | 12'' | Stereo | Bulgária</p>
+
+                <ul class="tags-genero" aria-label="Gêneros">
+                    <li>Disco</li>
+                    <li>Pop</li>
+                    <li>Eletrônica</li>
+                </ul>
+
+                <div class="rodape-card">
+                    <span class="preco-disco">R$169,90</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="card-disco">
+            
+            <a href="produto1.html" class="capa-disco">
+                <img src="img/InTheCourtOfTheCrimsonKingTheCrimsonKing.jpg" alt="Capa do albúm Demon Days">
+            </a>
+            <div class="info-disco">
+                <p class="artista-disco">Crimson King</p>
+                <h2><a href="produto1.html">In The In The Court Of The Crimson King - 2010</a></h2>
+                <p class="detalhes-disco">2x LP | 12'' | Stereo | Reino Unido</p>
+
+                <ul class="tags-genero" aria-label="Gêneros">
+                    <li>Prog Rock</li>
+                    <li>Rock</li>
+                    <li>Música Experimental</li>
+                </ul>
+
+                <div class="rodape-card">
+                    <span class="preco-disco">R$379,90</span>
+                </div>
+            </div>
+        </article>
+    </section>
 
     <footer>
 
