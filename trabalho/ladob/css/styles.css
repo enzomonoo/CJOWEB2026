@@ -68,7 +68,7 @@ a{
     color: var(--branco);   
 }
 
-.logo{
+.logo-nav>*{
     fill: var(--preto);
     stroke: var(--rosa);
     stroke-width:3;

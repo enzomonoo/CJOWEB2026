@@ -1,0 +1,5 @@
+<svg width="44" height="44">
+   <rect x="2" y="2" rx="2" ry="2" width="40" height="40" style="fill:#1B2021; stroke:#EA638C; stroke-width:3;"/>
+   <circle cx="22" cy="22" r="20" style="fill:#1B2021; stroke:#EA638C; stroke-width:3;"/>
+   <path d="M22 2 L22 40 L40 20 L22 20" style="fill:#1B2021; stroke:#EA638C; stroke-width:3;"/>
+</svg>
