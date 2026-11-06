@@ -47,11 +47,14 @@ a{
     color: var(--rosa);
     font-weight: bold;
     text-decoration: none;
-    
 }
 
 .navbar-vidro a{
-    transition: color 0.5s;
+    transition: all 0.5s;
+}
+
+.navbar-vidro a:hover{
+    transform: scale(1.10);
 }
 
 .navbar-vidro a:hover{
@@ -68,17 +71,10 @@ a{
     color: var(--branco);   
 }
 
-.logo-nav>*{
-    fill: var(--preto);
-    stroke: var(--rosa);
-    stroke-width:3;
-    transition: all 0.5s;
-}
-
-.icone-botao{
+.icone-carrinho, .icone-busca, .logo-nav{
     background: transparent;
     border: none;
-    color: #cbd5e1;
+    color: var(--branco);
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -90,7 +86,7 @@ a{
 
 }
 
-.icone-botao:hover {
+.icone-carrinho:hover, .icone-busca:hover, .logo-nav:hover {
     fill: var(--cinza);
     stroke: var(--branco);
 }
@@ -102,7 +98,7 @@ a{
 
 .espacador-conteudo{
     margin: 3%;
-    height: 40vh;
+    height: 45vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -171,11 +167,7 @@ a{
     height: 100%;
     object-fit: cover;
     transition: all 0.35s ease;
-}
-/* Zoom da arte do album*/
-/* .card-disco:hover .capa-disco img {
-    transform: scale(1.10);
-} */
+} 
 
 .selo-disco {
     position: absolute;
@@ -243,4 +235,134 @@ a{
     border-radius: 999px;
     font-size: 0.75rem;
     line-height: 1.2;
+}
+
+.overlay-carrinho {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;background: rgba(27, 32, 33, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1100;
+}
+
+.overlay-carrinho.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sidebar-carrinho {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    background: var(--cinza);
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1101;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-carrinho.active {
+    right: 0;
+}
+
+.header-carrinho {
+    padding: 20px;
+    border-bottom: 1px solid var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-carrinho h2{
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.botao-fechar-carrinho{
+    background: transparent;
+    border: none;
+    stroke-width: 3px;
+    cursor: pointer;
+    color: var(--cinza);
+    padding: 4px;
+}
+
+.corpo-carrinho {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.item-carrinho{
+    display: flex;
+    gap: 2vh;
+    align-items: center;
+}
+
+.item-carrinho img {
+    width: 10vh;
+    height: 10vh;
+    flex-shrink: 0;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: all 0.25s;
+}
+
+.item-carrinho img:hover {
+    transform: scale(1.25);
+}
+
+.item-detalhes h3 {
+    margin: 0 0 1vh 0;
+    color: var(--rosa);
+}
+
+
+.item-detalhes p {
+    margin: 0;
+    color: var(--branco);
+    font-weight: 500;
+}
+
+.rodape-carrinho {
+    padding: 20px;
+    border-top: 1px solid var(--branco);
+}
+
+.total-carrinho {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-top: 3vh;
+}
+
+.botao-checkout {
+    width: 100%;
+    background-color: var(--rosa);
+    color: var(--cinza);
+    border: none;
+    padding: 2vh;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.botao-checkout:hover{
+    color: var(--preto);
+    background-color: var(--branco);
+    
 }
