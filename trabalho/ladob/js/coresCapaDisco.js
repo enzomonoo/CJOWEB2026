@@ -46,11 +46,15 @@ function pegarCorDoDisco(imageElement, ratio, regiao = { x: 0, y: 0, w: 1, h: 1 
 function aplicarCoresDoDisco(img) {
     const cor1 = pegarCorDoDisco(img, 4, { x: 0,   y: 0,   w: 0.5, h: 0.5 });
     const cor2 = pegarCorDoDisco(img, 4, { x: 0.5, y: 0.5, w: 0.5, h: 0.5 });
+    const corPrimaria = pegarCorDoDisco(img, 4, { x: 0, y: 0.5, w: 0.5, h: 0.5 });
+    const corDetalhe = pegarCorDoDisco(img, 4, { x: 0, y: 0.5, w: 0.5, h: 0.5 });
 
     if (!cor1 || !cor2) return;
 
-    document.body.style.setProperty("--cor1", `rgba(${cor1.R}, ${cor1.G}, ${cor1.B}, 0.85)`);
-    document.body.style.setProperty("--cor2", `rgba(${cor2.R}, ${cor2.G}, ${cor2.B}, 0.75)`);
+    document.body.style.setProperty("--cor1", `rgba(${cor1.R}, ${cor1.G}, ${cor1.B}, 0.65)`);
+    document.body.style.setProperty("--cor2", `rgba(${cor2.R}, ${cor2.G}, ${cor2.B}, 0.55)`);
+    document.body.style.setProperty("--cor-primaria-album", `rgba(${corPrimaria.R + 120}, ${corPrimaria.G + 120}, ${corPrimaria.B + 120}, 1)`);
+    document.body.style.setProperty("--cor-detalhe-album", `rgba(${corDetalhe.R}, ${corDetalhe.G}, ${corDetalhe.B}, 1)`);
 }
 
 const imagemDisco = document.getElementById("capa-produto");

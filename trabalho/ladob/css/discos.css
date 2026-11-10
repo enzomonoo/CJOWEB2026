@@ -1,7 +1,17 @@
+:root{
+    /*vars para as cores, nao usar para RGBA*/
+    --preto : #1B2021;
+	--cinza : #30343F;
+	--vermelho : #89023E;
+	--rosa : #EA638C;
+    --branco : #FFD9DA;
+}
+
 body{
     --cor1: rgba(137, 2, 62, 0.55);
     --cor2: rgba(234, 99, 140, 0.35);
-
+    --cor-principal-album: var(--branco);
+    --cor-detalhe-album: var(--rosa);
     background:
         radial-gradient(circle at 15% 20%, var(--cor1), transparent 45%),
         radial-gradient(circle at 85% 70%, var(--cor2), transparent 50%),
@@ -9,7 +19,81 @@ body{
     background-attachment: fixed;
 }
 
-.container-disco, .detalhes-disco {
-  background: radial-gradient(circle at center, var(--cor-disco-dinamica, #333) 0%, #111 80%);
+
+.disco-titulo{
+    margin-left: 6vh;
+    margin-top: 3vh;
+    color: var(--cor-primaria-album);
+    letter-spacing: -6%;
+    font-size: 5vh;
+    font-weight: 700;
+    -webkit-text-stroke: 1px var(--cor-detalhe-album);
+}
+
+
+/* Display 3D do Disco */
+.container-disco {
+  background: radial-gradient(circle at center, var(--cor-disco-dinamica, var(--cinza)) 0%, var(--preto) 80%);
   transition: all 0.5s ease;
+}
+
+.disco-wrap {
+    margin: 5vh;
+    perspective: 525px;
+    width: 525px;
+    height: 525px;
+}
+
+.disco-interno {
+    position: relative;
+    width: min(90vw, 500px);
+    height: min(60vw, 500px);
+    transform-style: preserve-3d;
+    transition: transform 0.2s ease-out;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.disco-fundo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--cor1), var(--cor2));
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+    transform: translateZ(0px);
+}
+
+.disco-camada {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+    transition: transform 0.2s ease-out;
+}
+
+/* Camadas do efeito 3D do disco */
+
+.camada-1 { top: 30px; transform: translateZ(20px); }
+
+.camada-2 { top: 120px; transform: translateZ(40px); }
+
+.capa-disco {
+    aspect-ratio: 1;
+    width: 100%;
+    max-width: 425px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
