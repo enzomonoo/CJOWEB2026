@@ -3,24 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lado B</title>
+    <title>TEMPLATE</title>
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/principal.css">
+    <link rel="stylesheet" href="../css/discos.css">
     <link rel="icon" href="../img/logo.png">
 </head>
 <body>
     <nav class="navbar-vidro">
         <!-- Logo -->
         <a href="../index.html">
-            <div>
-                <button class="logo-nav">
-                    <svg viewBox="0 0 44 44" width="44" height="44" class="logo-nav" stroke-width="3">
-                        <rect x="2" y="2" rx="2" ry="2" width="40" height="40"/>
-                        <circle cx="22" cy="22" r="20"/>
-                        <path d="M22 2 L22 40 L40 20 L22 20"/>
-                    </svg>
-                </button>
-            </div>
+            <svg viewBox="0 0 44 44" width="44" height="44" class="logo-nav" stroke-width="3">
+                <rect x="2" y="2" rx="2" ry="2" width="40" height="40"/>
+                <circle cx="22" cy="22" r="20"/>
+                <path d="M22 2 L22 40 L40 20 L22 20"/>
+            </svg>
         </a>
         <!-- Links da Nav Bar -->
         <div class="links-nav">
@@ -47,6 +43,7 @@
                     <path d="M16 10a4 4 0 0 1-8 0"/>
                 </svg>
             </button>
+        </div>
     </nav>
     <!-- Overlay do carrinho -->
     <div class="carrinho-wrap">
@@ -64,7 +61,7 @@
            </div>
            <!-- Corpo do carrinho -->
            <div class="corpo-carrinho">
-               <a href="discos/paranoid-1970.html">
+               <a href="../discos/paranoid-1970.html">
                     <div class="item-carrinho">
                         <img src="../img/ParanoidBlackSabbath.jpg" alt="Produto" class="item-imagem">
                         <div class="item-detalhes">
@@ -73,7 +70,7 @@
                         </div>
                    </div>
                </a>
-               <a href="discos/skeleta-2025.html">
+               <a href="../discos/skeleta-2025.html">
                    <div class="item-carrinho">
                         <img src="../img/SkeletaGhost.jpg" alt="Produto" class="item-imagem">
                         <div class="item-detalhes">
@@ -89,17 +86,18 @@
                     <span>Total: </span>
                     <span>R$409,80</span>
                </div>
-               <a href="checkout.html">
-                    <button class="botao-checkout">Ir para Checkout</button>
-               </a>
+               <a href="checkout.html" class="botao-checkout">Ir para Checkout</a>
             </div>
         </div>    
     </div>
+    
+    <!-- Disco -->
+    <img src="../img/ParanoidBlackSabbath.jpg" alt="Capa do álbum Paranoid" id="capa-produto" width="50">
     <footer>
 
     </footer>
-
     <!-- Scripts -->
+    <script type="text/javascript" src="../js/coresCapaDisco.js"></script>
     <script type="text/javascript" src="../js/carrinho.js"></script>
 </body>
 </html>

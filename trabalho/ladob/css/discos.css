@@ -1,0 +1,15 @@
+body{
+    --cor1: rgba(137, 2, 62, 0.55);
+    --cor2: rgba(234, 99, 140, 0.35);
+
+    background:
+        radial-gradient(circle at 15% 20%, var(--cor1), transparent 45%),
+        radial-gradient(circle at 85% 70%, var(--cor2), transparent 50%),
+        var(--cinza);
+    background-attachment: fixed;
+}
+
+.container-disco, .detalhes-disco {
+  background: radial-gradient(circle at center, var(--cor-disco-dinamica, #333) 0%, #111 80%);
+  transition: all 0.5s ease;
+}

@@ -244,6 +244,8 @@ a{
 }
 
 .botao-checkout {
+    display: block;
+    text-align: center;
     width: 100%;
     background-color: var(--rosa);
     color: var(--cinza);
