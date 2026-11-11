@@ -35,10 +35,6 @@ body{
     left: 0;
     width: 100%;
     height: 10vh;
-    background: rgba(27, 32,33, 0.65);
-    backdrop-filter: saturate(180%) blur(20px);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    border-bottom: 1px solid var(--cinza);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -67,7 +63,7 @@ a{
 .links-nav{
     font-size: 2vw;
     display: flex;
-    gap: 2.5vw;
+    gap: 3vw;
     transition: color 0.25s;
 }
 .links-nav a:hover{
@@ -112,7 +108,7 @@ a{
 .espacador-conteudo h1{
     font-family: "FonteLogo";
     color: var(--rosa);
-    font-size: 15vw;
+    font-size: 12vw;
     margin: 0;
     text-shadow: 1.25vh 1.25vw 10px var(--preto);
 }
@@ -263,9 +259,12 @@ a{
     
 }
 
-.footer-informacoes {
+.footer-informacoes, .navbar-vidro {
     border-top: 1px solid var(--rosa);
-    background-color: var(--preto);
+    background: rgba(27, 32,33, 0.65);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 1px solid var(--cinza);
 }
 
 .footer-interno {
@@ -280,6 +279,7 @@ a{
 }
 
 .footer-nome {
+    margin-left: 2.5vh;
     font-family: "FonteLogo";
     font-size: 24px;
     color: var(--rosa);

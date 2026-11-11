@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TEMPLATE</title>
+    <title>Paranoid - Black Sabbath</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/discos.css">
     <link rel="icon" href="../img/logo.png">
@@ -11,7 +11,7 @@
 <body>
     <nav class="navbar-vidro">
         <!-- Logo -->
-        <a href="../index.html">
+        <a href="../">
             <svg viewBox="0 0 44 44" width="44" height="44" class="logo-nav" stroke-width="3">
                 <rect x="2" y="2" rx="2" ry="2" width="40" height="40"/>
                 <circle cx="22" cy="22" r="20"/>
@@ -91,14 +91,72 @@
         </div>    
     </div>
     
-    <!-- Disco -->
-    <img src="../img/ParanoidBlackSabbath.jpg" alt="Capa do álbum Paranoid" id="capa-produto" width="50">
-    <footer>
-
+    <div class="display-produto">
+        <div class="display-disco">
+            <!-- Nome e Artista do Disco -->
+             <a href="../artistas/black-sabbath">
+                <p class="disco-artista">Black Sabbath</p>
+            </a>
+            <h2 class="disco-titulo">Paranoid - 1970</h2>
+            <!-- Imagem do Disco -->
+            <div class="disco-wrap" id="disco-3D">
+                <div class="disco-interno">
+                    <div class="disco-fundo"></div>
+                    <div class="disco-camada camada-1"></div>
+                    <div class="disco-camada camada-2">
+                        <div class="disco-nome">
+                            <img src="../img/ParanoidBlackSabbath.jpg" alt="Capa do álbum NOMEALBUM" id="capa-produto" class="capa-disco">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="display-caracteristicas">
+            <h2>Caracteristicas : </h2>
+            <p class="texto-caracteristicas">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque ullam corporis laborum enim reiciendis totam vero. Blanditiis deleniti facere eius earum fugiat sed enim! Neque iste laudantium voluptates rerum. Inventore, dolorum quis corporis, soluta rerum labore accusamus deleniti nemo cum quae sit iure totam mollitia ullam facere atque? Numquam, ipsam?</p>
+        </div>
+        <div class="display-comprar">
+            <h2>Comprar : </h2>
+            <p class="texto-comprar">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quisquam quod quo perspiciatis ea repellendus commodi, culpa beatae inventore nesciunt?</p>
+            <button class="botao-add-carrinho">
+                <span class="conteudo-botao-carrinho">
+                <span class="texto-botao">Colocar na Sacola</span>
+                    <svg class="icone-botao-carrinho" viewBox="0 0 24 24" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"/>
+                        <circle cx="20" cy="21" r="1"/>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                    </svg>
+                </span>
+                <div class="carregador"></div>
+                <svg class="icone-check" viewBox="0 0 24 24" fill="none" stroke-width="3">
+                <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            </button>
+        </div>
+    </div>
+    <footer class="footer-informacoes">
+        <div class="footer-interno">
+            <a href="../">
+                <span class="footer-nome">Lado b</span>
+            </a>
+            <div class="links-footer">
+                <a href="../discos/index.html" class="item-nav">Discos</a>
+                <a href="../procurar/index.html" class="item-nav">Github</a>
+                <a href="../artistas/index.html" class="item-nav">IFSP - CJO</a>
+                <a href="../generos/index.html" class="item-nav">Contato</a>
+                <a href="../perfil/index.html" class="item-nav">Perfil</a>
+                <a href="../sobre/index.html" class="item-nav">Sobre</a>
+            </div>
+            <div class="footer-direita">
+                <span class="footer-copyright">2026 - Enzo Monoo</span>
+            </div>
+        </div>
     </footer>
     <!-- Scripts -->
     <script type="text/javascript" src="../js/coresCapaDisco.js"></script>
+    <script type="text/javascript" src="../js/efeito3DDisco.js"></script>
     <script type="text/javascript" src="../js/carrinho.js"></script>
+    <script type="text/javascript" src="../js/addCarrinho.js"></script>
 </body>
 </html>
 

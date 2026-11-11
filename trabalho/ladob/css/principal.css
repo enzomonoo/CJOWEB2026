@@ -10,7 +10,7 @@
 .titulo-display{
     font-family: "FonteLogo";
     color: var(--rosa);
-    font-size: 3vw;
+    font-size: 3rem;
     margin: 0 0 0 2vw;
     text-shadow: 0.5vh 0.5vw 1vh var(--preto);
 }
