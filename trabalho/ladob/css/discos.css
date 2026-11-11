@@ -1,0 +1,308 @@
+:root{
+    /*vars para as cores, nao usar para RGBA*/
+    --preto : #1B2021;
+	--cinza : #30343F;
+	--vermelho : #89023E;
+	--rosa : #EA638C;
+    --branco : #FFD9DA;
+}
+
+body{
+    --cor1: rgba(137, 2, 62, 0.55);
+    --cor2: rgba(234, 99, 140, 0.35);
+    --cor-primaria-album: var(--branco);
+    --cor-detalhe-album: var(--rosa);
+    --cor-primaria-transparente-album: var(--branco);
+    --cor-detalhe-transparente-album: var(--rosa);
+    background:
+        radial-gradient(circle at 15% 20%, var(--cor1), transparent 45%),
+        radial-gradient(circle at 85% 70%, var(--cor2), transparent 50%),
+        var(--cor-primaria-album);
+    background-attachment: fixed;
+}
+
+main, .disco-container {
+    padding-bottom: 2rem;
+    margin-bottom: 0;
+}
+
+.display-produto{
+    display: grid;
+    grid-template-columns: auto auto 25vw;
+}
+
+.display-disco{
+    display: block;
+    max-width: 575px;
+}
+
+.disco-titulo {
+    margin-left: 6vh;
+    margin-top: 0.2vh;
+    color: white;
+    letter-spacing: -6%;
+    font-size: 5vh;
+    font-weight: 700;
+    font-weight: 700;   text-shadow:
+       3px  3px     0 var(--cor-primaria-album),
+      -1px -1px     0 var(--cor-primaria-album),  
+       1px -1px     0 var(--cor-primaria-album),
+      -1px  1px     0 var(--cor-primaria-album),
+       1px  1px     0 var(--cor-primaria-album);
+}
+
+.disco-artista {
+    margin-left: 6vh;
+    margin-top: 3vw;
+    margin-bottom: 0.2vh;
+    color: white;
+    letter-spacing: -6%;
+    font-size: 3vh;
+    font-weight: 700;   text-shadow:
+       3px  3px     0 var(--cor-primaria-album),
+      -1px -1px     0 var(--cor-primaria-album),  
+       1px -1px     0 var(--cor-primaria-album),
+      -1px  1px     0 var(--cor-primaria-album),
+       1px  1px     0 var(--cor-primaria-album);
+    transition: all 0.5s;
+}
+
+.disco-artista:hover{
+    color: var(--cor1);
+    text-decoration-line: underline;
+}
+
+
+/* Display 3D do Disco */
+.container-disco {
+  background: radial-gradient(circle at center, var(--cor-disco-dinamica, var(--cinza)) 0%, var(--preto) 80%);
+  transition: all 0.5s ease;
+}
+
+.disco-wrap {
+    margin: 5vh;
+    perspective: 525px;
+    width: 525px;
+    height: 525px;
+}
+
+.disco-interno {
+    position: relative;
+    width: min(90vw, 500px);
+    height: min(90vw, 500px);
+    transform-style: preserve-3d;
+    transition: transform 0.1s ease-out;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.disco-fundo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--cor1), var(--cor2));
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+    transform: translateZ(0px);
+}
+
+.disco-camada {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+    transition: transform 0.2s ease-out;
+}
+
+/* Camadas do efeito 3D do disco */
+
+.camada-1 { top: 30px; transform: translateZ(20px); }
+
+.camada-2 { top: 120px; transform: translateZ(40px); }
+
+.capa-disco {
+    aspect-ratio: 1;
+    width: 100%;
+    max-width: 430px;
+    height: auto;
+    object-fit: fill;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.display-caracteristicas, .display-comprar {
+    color: white;
+    height: auto;
+    padding: 1vh;
+    margin: 4vh 2vh 2vh 1vh;
+    background: linear-gradient(135deg, var(--cor1), var(--cor2));
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+    font-weight: 700;   text-shadow:
+       3px  3px     0 var(--cor-primaria-album),
+      -1px -1px     0 var(--cor-primaria-album),  
+       1px -1px     0 var(--cor-primaria-album),
+      -1px  1px     0 var(--cor-primaria-album),
+       1px  1px     0 var(--cor-primaria-album);
+}
+
+.display-comprar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.botao-add-carrinho {
+    position: relative;
+    background: #1e293b;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 160px;
+    height: 54px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+
+.botao-add-carrinho:hover {
+    background: #334155;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.15);
+}
+
+.conteudo-botao-carrinho {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.icone-botao-carrinho {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.carregador {
+    display: none;
+    width: 24px;
+    height: 24px;
+    border: 3px solid rgba(255,255,255,0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: rotacionar 0.8s linear infinite;
+    position: absolute;
+}
+
+.icone-check {
+    display: none;
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    stroke: var(--rosa);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 24;
+    stroke-dashoffset: 24;
+    animation: desenharCheck 0.4s forwards 0.2s;
+}
+
+.botao-add-carrinho.carrinho-carregando .conteudo-botao-carrinho{
+    width: 54px;
+    min-width: 54px;
+    border-radius: 50%;
+    background: #334155;
+    cursor: default;
+    transform: none;
+    padding: 0;
+}
+
+.botao-add-carrinho.carrinho-carregando .conteudo-botao-carrinho{
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+.botao-add-carrinho.carrinho-carregando .carregador{
+    display: block;
+}
+
+.botao-add-carrinho.carrinho-carregando {
+    width: 54px;
+    min-width: 54px;
+    border-radius: 50%;
+    background: var(--cor-primaria-album);
+    cursor: default;
+    transform: none;
+    padding: 0;
+}
+
+.botao-add-carrinho.carrinho-adcionado .conteudo-botao-carrinho, .botao-add-carrinho.carrinho-adcionado .carregador {
+    display: none;
+}
+
+.botao-add-carrinho.carrinho-adcionado .icone-check {
+    display: block;
+}
+
+@keyframes rotacionar {
+    to {transform: rotate(360deg); }
+}
+
+@keyframes desenharCheck {
+    to {stroke-dashoffset: 0;}
+}
+@media (max-width: 900px) {
+    .display-produto {
+        grid-template-columns: 1fr;
+    }
+
+    .display-disco {
+        max-width: 100%;
+    }
+
+    .disco-titulo,
+    .disco-artista {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .disco-artista {
+        margin-top: 4vh;
+    }
+
+    .disco-wrap {
+        width: min(90vw, 525px);
+        height: min(90vw, 525px);
+        margin: 3vh auto;
+    }
+
+    .display-caracteristicas,
+    .display-comprar {
+        margin: 2vh 3vw;
+        padding: 16px;
+    }
+}

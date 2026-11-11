@@ -1,0 +1,115 @@
+
+.display-discos{
+    width: min(100% - 5%, 400vw);
+    margin: 4vh auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+}
+
+.titulo-display{
+    font-family: "FonteLogo";
+    color: var(--rosa);
+    font-size: 3rem;
+    margin: 0 0 0 2vw;
+    text-shadow: 0.5vh 0.5vw 1vh var(--preto);
+}
+
+.card-disco {
+    background: rgba(27, 32, 33, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 217, 218, 0.15);
+    overflow: hidden;
+    border-radius: 12px;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+
+.card-disco:hover {
+    transform: translateY(-5px) translateX(-5px);
+    border-color: var(--rosa);
+}
+
+.capa-disco {
+    position: relative;
+    display: block;
+    aspect-ratio: 1;
+    overflow: hidden;
+}
+
+.capa-disco img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.35s ease;
+} 
+
+.selo-disco {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 5px 9px;
+    color: var(--preto);
+    background: var(--rosa);
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.info-disco {
+    padding: 10px;
+}
+
+.artista-disco, .formato-disco {
+    margin: 0;
+    padding: 2%;
+    color: var(--branco);
+    font-size: 0.9rem;
+}
+
+.info-disco h2 a{
+    color: var(--rosa);
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-disco a {
+    padding: 0%;
+    color: var(--branco);
+}
+
+.rodape-card {
+    display: flex;
+    align-items: center;    
+    gap: 12px;
+    margin-top: 0.5em;
+}
+
+.preco-disco {
+    padding: 2%;
+    color: var(--branco);
+    font-weight: 700;
+    font-size: 2em;
+}
+.tags-genero {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    margin: 12px 0 0;
+    padding: 0;
+}
+
+.tags-genero li {
+    padding: 5px 9px;
+    color: var(--branco);
+    background: rgba(234, 99, 140, 0.12);
+    border: 1px solid rgba(234, 99, 140, 0.45);
+    border-radius: 999px;
+    font-size: 0.75rem;
+    line-height: 1.2;
+}

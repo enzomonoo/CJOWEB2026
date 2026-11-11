@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lado B</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/principal.css">
     <link rel="icon" href="img/logo.png">
 </head>
 <body>
@@ -21,14 +22,16 @@
                 </button>
             </div>
         </a>
+        <!-- Nome da Loja -->
+        
         <!-- Links da Nav Bar -->
         <div class="links-nav">
-            <a href="discos.html" class="item-nav">Discos</a>
-            <a href="procurar.html" class="item-nav">Procurar</a>
-            <a href="artistas.html" class="item-nav">Artistas</a>
-            <a href="generos.html" class="item-nav">Gêneros</a>
-            <a href="perfil.html" class="item-nav">Perfil</a>
-            <a href="login.html" class="item-nav">Sobre</a>
+            <a href="discos/index.html" class="item-nav">Discos</a>
+            <a href="procurar/index.html" class="item-nav">Procurar</a>
+            <a href="artistas/index.html" class="item-nav">Artistas</a>
+            <a href="generos/index.html" class="item-nav">Gêneros</a>
+            <a href="perfil/index.html" class="item-nav">Perfil</a>
+            <a href="sobre/index.html" class="item-nav">Sobre</a>
         </div>
         <!-- Botoes do Nav -->
         <div class="acoes-nav">
@@ -38,7 +41,6 @@
                     <line x1="21" y1="21" x2="16.65" y2="16.65"/>
                 </svg>
             </button>
-            <!-- AQUI AQUI AQUI -->
             <button class="icone-carrinho" id="botao-abrir">
                 <svg viewBox="0 0 24 24" width="44" height="44" stroke-width="2">
                     <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
@@ -105,12 +107,14 @@
     <section class="display-discos" aria-label="Discos">
         <article class="card-disco">
             
-            <a href="produtos/paranoid-1970.html" class="capa-disco">
+            <a href="discos/paranoid-1970.html" class="capa-disco">
                 <img src="img/ParanoidBlackSabbath.jpg" alt="Capa do albúm Paranoid">
             </a>
             <div class="info-disco">
-                <p class="artista-disco">Black Sabbath</p>
-                <h2><a href="produto1.html">Paranoid - 1970</a></h2>
+                <a href="artistas/black-sabbath.html">
+                    <p class="artista-disco">Black Sabbath</p>
+                </a>
+                <h2><a href="discos/paranoid-1970.html">Paranoid - 1970</a></h2>
                 <p class="detalhes-disco">LP | 12'' | Stereo | Alemanha</p>
 
                 <ul class="tags-genero" aria-label="Gêneros">
@@ -127,13 +131,15 @@
         
         <article class="card-disco">
             
-            <a href="produto2.html" class="capa-disco">
+            <a href="discos/reisereise-2004.html" class="capa-disco">
                 <img src="img/ReiseReiseRammstein.jpg" alt="Capa do albúm Reise Reise">
-                <span class="selo-disco">Novo</span>
+                <span class="selo-disco">Novo!</span>
             </a>
             <div class="info-disco">
-                <p class="artista-disco">Rammstein</p>
-                <h2><a href="produto2.html">Reise Reise - 2004</a></h2>
+                <a href="artistas/rammstein.html">
+                    <p class="artista-disco">Rammstein</p>
+                </a>
+                <h2><a href="discos/reisereise-2004.html">Reise Reise - 2004</a></h2>
                 <p class="detalhes-disco">2x LP | 12'' | Stereo | Alemanha</p>
 
                 <ul class="tags-genero" aria-label="Gêneros">
@@ -150,12 +156,14 @@
 
         <article class="card-disco">
             
-            <a href="produto1.html" class="capa-disco">
+            <a href="discos/thewall-1979.html" class="capa-disco">
                 <img src="img/TheWallPinkFloyd.jpg" alt="Capa do albúm The Wall">
             </a>
             <div class="info-disco">
-                <p class="artista-disco">Pink Floyd</p>
-                <h2><a href="produto1.html">The Wall - 1979</a></h2>
+                <a href="artistas/pink-floyd.html">
+                    <p class="artista-disco">Pink Floyd</p>
+                </a>
+                <h2><a href="discos/thewall-1979.html">The Wall - 1979</a></h2>
                 <p class="detalhes-disco">2x LP | 12'' | Stereo | EUA</p>
 
                 <ul class="tags-genero" aria-label="Gêneros">
@@ -172,13 +180,15 @@
 
         <article class="card-disco">
             
-            <a href="produto1.html" class="capa-disco">
+            <a href="discos/skeleta-2025.html" class="capa-disco">
                 <img src="img/SkeletaGhost.jpg" alt="Capa do albúm Skeleta">
-                <span class="selo-disco">Novo</span>
+                <span class="selo-disco">Novo!</span>
             </a>
             <div class="info-disco">
-                <p class="artista-disco">Ghost</p>
-                <h2><a href="produto1.html">Skeletá - 2025</a></h2>
+                <a href="artistas/ghost.html">
+                    <p class="artista-disco">Ghost</p>
+                </a>
+                <h2><a href="discos/skeleta-2025.html">Skeletá - 2025</a></h2>
                 <p class="detalhes-disco">LP | 12'' | Stereo | Suécia</p>
 
                 <ul class="tags-genero" aria-label="Gêneros">
@@ -195,13 +205,15 @@
 
         <article class="card-disco">
             
-            <a href="produto1.html" class="capa-disco">
+            <a href="discos/gatesofmetalfriedchickenofdeath-2005.html" class="capa-disco">
                 <img src="img/GatesOfMetalFriedChickenOfDeathMassacration.jpg" alt="Capa do albúm Gates of Metal Fried Chicken of Death">
-                <span class="selo-disco">Novo</span>
+                <span class="selo-disco">Novo!</span>
             </a>
             <div class="info-disco">
-                <p class="artista-disco">Massacration</p>
-                <h2><a href="produto1.html">Gates of Metal Fried Chicken of Death - 2005</a></h2>
+                <a href="artistas/massacration.html">
+                    <p class="artista-disco">Massacration</p>
+                </a>
+                <h2><a href="discos/gatesofmetalfriedchickenofdeath-2005.html">Gates of Metal Fried Chicken of Death - 2005</a></h2>
                 <p class="detalhes-disco">LP | 12'' | Mono | Brasil</p>
 
                 <ul class="tags-genero" aria-label="Gêneros">
@@ -218,13 +230,15 @@
 
         <article class="card-disco">
             
-            <a href="produto1.html" class="capa-disco">
+            <a href="discos/currents-2015.html" class="capa-disco">
                 <img src="img/CurrentsTameImpala.jpg" alt="Capa do albúm Currents">
                 <span class="selo-disco">Esgotado!</span>
             </a>
             <div class="info-disco">
-                <p class="artista-disco">Tame Imapala</p>
-                <h2><a href="produto1.html">Currents - 2015</a></h2>
+                <a href="artistas/tame-impala.html">
+                    <p class="artista-disco">Tame Impala</p>
+                </a>
+                <h2><a href="discos/currents-2015.html">Currents - 2015</a></h2>
                 <p class="detalhes-disco">2x LP | 12'' | Stereo | EUA</p>
 
                 <ul class="tags-genero" aria-label="Gêneros">
@@ -241,12 +255,14 @@
 
         <article class="card-disco">
             
-            <a href="produto1.html" class="capa-disco">
+            <a href="discos/demondays-2005.html" class="capa-disco">
                 <img src="img/DemonDaysGorillaz.jpg" alt="Capa do albúm Demon Days">
             </a>
             <div class="info-disco">
-                <p class="artista-disco">Gorillaz</p>
-                <h2><a href="produto1.html">Demon Days - 2005</a></h2>
+                <a href="artistas/gorillaz.html">
+                    <p class="artista-disco">Gorillaz</p>
+                </a>
+                <h2><a href="discos/demondays-2005.html">Demon Days - 2005</a></h2>
                 <p class="detalhes-disco">2x LP | 12'' | Stereo | Reino Unido</p>
 
                 <ul class="tags-genero" aria-label="Gêneros">
@@ -263,12 +279,14 @@
 
         <article class="card-disco">
             
-            <a href="produto1.html" class="capa-disco">
+            <a href="discos/goldgreatesthits-1992.html" class="capa-disco">
                 <img src="img/GoldAbba.jpg" alt="Capa do albúm Gold">
             </a>
             <div class="info-disco">
-                <p class="artista-disco">Gorillaz</p>
-                <h2><a href="produto1.html">Gold Greatest Hits - 1992</a></h2>
+                <a href="artistas/abba.html">
+                    <p class="artista-disco">Abba</p>
+                </a>
+                <h2><a href="discos/goldgreatesthits-1992.html">Gold Greatest Hits - 1992</a></h2>
                 <p class="detalhes-disco">2x LP | 12'' | Stereo | Bulgária</p>
 
                 <ul class="tags-genero" aria-label="Gêneros">
@@ -285,12 +303,14 @@
 
         <article class="card-disco">
             
-            <a href="produto1.html" class="capa-disco">
+            <a href="discos/inthecourtofthecrimsonking-2010.html" class="capa-disco">
                 <img src="img/InTheCourtOfTheCrimsonKingTheCrimsonKing.jpg" alt="Capa do albúm Court Of The Crimson King">
             </a>
             <div class="info-disco">
-                <p class="artista-disco">Crimson King</p>
-                <h2><a href="produto1.html">In The In The Court Of The Crimson King - 2010</a></h2>
+                <a href="artistas/crimson-king.html">
+                    <p class="artista-disco">Crimson King</p>
+                </a>
+                <h2><a href="discos/inthecourtofthecrimsonking-2010.html">In The Court Of The Crimson King - 2010</a></h2>
                 <p class="detalhes-disco">2x LP | 12'' | Stereo | Reino Unido</p>
 
                 <ul class="tags-genero" aria-label="Gêneros">
@@ -307,12 +327,14 @@
 
         <article class="card-disco">
             
-            <a href="produto1.html" class="capa-disco">
+            <a href="discos/randomaccessmemories-2013.html" class="capa-disco">
                 <img src="img/RandomAccessMemoriesDaftPunk.jpg" alt="Capa do albúm Random Access Memories">
             </a>
             <div class="info-disco">
-                <p class="artista-disco">Daft Punk</p>
-                <h2><a href="produto1.html">Random Access Memories - 2013</a></h2>
+                <a href="artistas/daft-punk.html">
+                    <p class="artista-disco">Daft Punk</p>
+                </a>
+                <h2><a href="discos/randomaccessmemories-2013.html">Random Access Memories - 2013</a></h2>
                 <p class="detalhes-disco">2x LP | 12'' | Stereo | França</p>
 
                 <ul class="tags-genero" aria-label="Gêneros">
@@ -329,12 +351,14 @@
 
             <article class="card-disco">
             
-            <a href="produto1.html" class="capa-disco">
+            <a href="discos/isthisit-2001.html" class="capa-disco">
                 <img src="img/IsThisItTheStrokes.jpg" alt="Capa do albúm Is This It">
             </a>
             <div class="info-disco">
-                <p class="artista-disco">The Strokes</p>
-                <h2><a href="produto1.html">Is This It - </a></h2>
+                <a href="artistas/strokes.html">
+                    <p class="artista-disco">Strokes</p>
+                </a>
+                <h2><a href="discos/isthisit-2001.html">Is This It - 2001</a></h2>
                 <p class="detalhes-disco">2x LP | 12'' | Stereo | Reino Unido</p>
 
                 <ul class="tags-genero" aria-label="Gêneros">
@@ -351,13 +375,15 @@
         
         <article class="card-disco">
             
-            <a href="produto1.html" class="capa-disco">
-                <img src="img/KillingInTheNameOfRageAgainstTheMachine.jpg" alt="Capa do albúm Rage Against The Machine">
-                <span class="selo-disco">Novo</span>
+            <a href="discos/rageagainstthemachine-1992.html" class="capa-disco">
+                <img src="img/RageAgainstTheMachineRageAgainstTheMachine.jpg" alt="Capa do albúm Rage Against The Machine">
+                <span class="selo-disco">Novo!</span>
             </a>
             <div class="info-disco">
-                <p class="artista-disco">Rage Against The Machine</p>
-                <h2><a href="produto1.html">Rage Against The Machine - 1992</a></h2>
+                <a href="artistas/rage-agaisnt-the-machine.html">
+                    <p class="artista-disco">Rage Against The Machine</p>
+                </a>
+                <h2><a href="discos/rageagainstthemachine-1992.html">Rage Against The Machine - 1992</a></h2>
                 <p class="detalhes-disco">2x LP | 12'' | Stereo | EUA</p>
 
                 <ul class="tags-genero" aria-label="Gêneros">
@@ -372,13 +398,26 @@
             </div>
         </article>
     </section>
-
-    <footer>
-
+    <footer class="footer-informacoes">
+        <div class="footer-interno">
+            <a href="../">
+                <span class="footer-nome">Lado b</span>
+            </a>
+            <div class="links-footer">
+                <a href="../discos/index.html" class="item-nav">Discos</a>
+                <a href="../procurar/index.html" class="item-nav">Github</a>
+                <a href="../artistas/index.html" class="item-nav">IFSP - CJO</a>
+                <a href="../generos/index.html" class="item-nav">Contato</a>
+                <a href="../perfil/index.html" class="item-nav">Perfil</a>
+                <a href="../sobre/index.html" class="item-nav">Sobre</a>
+            </div>
+            <div class="footer-direita">
+                <span class="footer-copyright">2026 - Enzo Monoo</span>
+            </div>
+        </div>
     </footer>
-
     <!-- Scripts -->
-    <script type="text/javascript" src="carrinho.js"></script>
+    <script type="text/javascript" src="js/carrinho.js"></script>
 </body>
 </html>
 

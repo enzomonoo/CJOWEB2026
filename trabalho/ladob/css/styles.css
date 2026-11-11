@@ -1,4 +1,5 @@
 :root{
+    /*vars para as cores, nao usar para RGBA*/
     --preto : #1B2021;
 	--cinza : #30343F;
 	--vermelho : #89023E;
@@ -21,10 +22,12 @@ body{
     font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     margin: 0;
     color : var(--branco);
-    background-color: var(--cinza);
-    min-height: 200vh;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(137, 2, 62, 0.55), transparent 45%),
+        radial-gradient(circle at 85% 70%, rgba(234, 99, 140, 0.35), transparent 50%),
+        var(--cinza);
+    background-attachment: fixed;
 }
-
 
 .navbar-vidro {
     position: sticky;
@@ -32,10 +35,6 @@ body{
     left: 0;
     width: 100%;
     height: 10vh;
-    background: rgba(27, 32,33, 0.75);
-    backdrop-filter: saturate(180%) blur(20px);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    border-bottom: 1px solid var(--cinza);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -53,7 +52,7 @@ a{
     transition: all 0.5s;
 }
 
-.navbar-vidro a:hover{
+.navbar-vidro a:hover, .icone-carrinho:hover, .icone-busca:hover{
     transform: scale(1.10);
 }
 
@@ -64,7 +63,7 @@ a{
 .links-nav{
     font-size: 2vw;
     display: flex;
-    gap: 2.5vw;
+    gap: 3vw;
     transition: color 0.25s;
 }
 .links-nav a:hover{
@@ -81,7 +80,7 @@ a{
     align-items: center;
     padding: 0;
     transition: all 0.5s;
-    fill: var(--preto);
+    fill: transparent;
     stroke: var(--rosa);  
 
 }
@@ -109,7 +108,7 @@ a{
 .espacador-conteudo h1{
     font-family: "FonteLogo";
     color: var(--rosa);
-    font-size: 15vw;
+    font-size: 12vw;
     margin: 0;
     text-shadow: 1.25vh 1.25vw 10px var(--preto);
 }
@@ -122,127 +121,12 @@ a{
     max-width: 120vw;
 }
 
-.display-discos{
-    width: min(100% - 5%, 400vw);
-    margin: 4vh auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 24px;
-}
-
-.titulo-display{
-    font-family: "FonteLogo";
-    color: var(--rosa);
-    font-size: 3vw;
-    margin: 0 0 0 2vw;
-    text-shadow: 0.5vh 0.5vw 1vh var(--preto);
-}
-
-.card-disco {
-    overflow: hidden;
-    color: var(--branco);
-    background: var(--preto);
-    border: 1px solid var(--cinza);
-    border-radius: 12px;
-    transition: transform 0.25s ease, border-color 0.25s ease;
-    box-shadow: 2vh 1vw 2vh var(--preto);
-}
-
-
-.card-disco:hover {
-    transform: translateY(-5px) translateX(-5px);
-    border-color: var(--rosa);
-}
-
-.capa-disco {
-    position: relative;
-    display: block;
-    aspect-ratio: 1;
-    overflow: hidden;
-}
-
-.capa-disco img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: all 0.35s ease;
-} 
-
-.selo-disco {
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    padding: 5px 9px;
-    color: var(--preto);
-    background: var(--rosa);
-    border-radius: 20px;
-    font-size: 0.75rem;
-    font-weight: 700;
-}
-
-.info-disco {
-    padding: 10px;
-}
-
-.artista-disco, .formato-disco {
-    margin: 0;
-    padding: 2%;
-    color: var(--branco);
-    font-size: 0.9rem;
-}
-
-.info-disco h2 a{
-    color: var(--rosa);
-    font-size: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.info-disco a {
-    padding: 0%;
-    color: var(--branco);
-}
-
-.rodape-card {
-    display: flex;
-    align-items: center;    
-    gap: 12px;
-    margin-top: 0.5em;
-}
-
-.preco-disco {
-    padding: 2%;
-    color: var(--branco);
-    font-weight: 700;
-    font-size: 2em;
-}
-.tags-genero {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    list-style: none;
-    margin: 12px 0 0;
-    padding: 0;
-}
-
-.tags-genero li {
-    padding: 5px 9px;
-    color: var(--branco);
-    background: rgba(234, 99, 140, 0.12);
-    border: 1px solid rgba(234, 99, 140, 0.45);
-    border-radius: 999px;
-    font-size: 0.75rem;
-    line-height: 1.2;
-}
-
 .overlay-carrinho {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;background: rgba(27, 32, 33, 0.6);
+    inset: 0;
+    background: rgba(27, 32, 33, 0.5);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -261,8 +145,11 @@ a{
     width: 100%;
     max-width: 400px;
     height: 100%;
-    background: var(--cinza);
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    background: rgba(27, 32, 33, 0.55);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-left: 1px solid rgba(255, 217, 218, 0.2);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.35);
     transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1101;
     display: flex;
@@ -275,7 +162,7 @@ a{
 
 .header-carrinho {
     padding: 20px;
-    border-bottom: 1px solid var(--branco);
+    border-bottom: 1px solid rgba(255, 217, 218, 0.2);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -283,16 +170,19 @@ a{
 
 .header-carrinho h2{
     margin: 0;
+    color: var(--branco);
     font-size: 1.25rem;
 }
 
 .botao-fechar-carrinho{
     background: transparent;
     border: none;
-    stroke-width: 3px;
+    stroke-width: 4px;
+    stroke: var(--rosa);
     cursor: pointer;
-    color: var(--cinza);
+    color: rgba(255, 217, 218, 0.2);
     padding: 4px;
+    fill: none;
 }
 
 .corpo-carrinho {
@@ -337,7 +227,7 @@ a{
 
 .rodape-carrinho {
     padding: 20px;
-    border-top: 1px solid var(--branco);
+    border-top: 1px solid rgba(255, 217, 218, 0.2);
 }
 
 .total-carrinho {
@@ -349,6 +239,8 @@ a{
 }
 
 .botao-checkout {
+    display: block;
+    text-align: center;
     width: 100%;
     background-color: var(--rosa);
     color: var(--cinza);
@@ -361,8 +253,64 @@ a{
     transition: all 0.5s;
 }
 
-.botao-checkout:hover{
+.botao-checkout:hover {
     color: var(--preto);
     background-color: var(--branco);
     
+}
+
+.footer-informacoes, .navbar-vidro {
+    border-top: 1px solid var(--rosa);
+    background: rgba(27, 32,33, 0.65);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 1px solid var(--cinza);
+}
+
+.footer-interno {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0.5vh 0.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-nome {
+    margin-left: 2.5vh;
+    font-family: "FonteLogo";
+    font-size: 24px;
+    color: var(--rosa);
+}   
+
+.links-footer{
+    display: flex;
+    gap: 1vh;
+    flex-wrap: wrap;
+}
+
+.links-footer a{
+    transition: color 0.5s;
+    margin-left: 3vh;
+}
+
+.links-footer a:hover{
+    color: var(--branco);
+}
+
+.footer-direita {
+    display: flex;
+    gap: 1vh;
+    align-items: center;
+}
+
+@media (max-width:900px){
+    .footer-interno{
+        flex-direction:column;align-items:flex-start
+    }
+    .footer-direita{
+        width:100%;justify-content:space-between
+    }
 }
