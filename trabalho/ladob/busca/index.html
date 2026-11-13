@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEMPLATE</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="../img/logo.png">
+</head>
+<body>
+    <nav class="navbar-vidro">
+        <!-- Nome da Loja -->
+        <a href="../" class="botao-home">
+            <span class="nome-loja">Lado b</span>
+        </a>
+        <!-- Links da Nav Bar -->
+        <div class="links-nav">
+            <a href="../discos/index.html" class="item-nav">Discos</a>
+            <a href="../procurar/index.html" class="item-nav">Procurar</a>
+            <a href="../artistas/index.html" class="item-nav">Artistas</a>
+            <a href="../generos/index.html" class="item-nav">Gêneros</a>
+            <a href="../perfil/index.html" class="item-nav">Perfil</a>
+            <a href="../sobre/index.html" class="item-nav">Sobre</a>
+        </div>
+        <!-- Botoes do Nav -->
+        <div class="acoes-nav">
+            <button class="icone-carrinho" id="botao-abrir">
+                <svg viewBox="0 0 24 24" width="44" height="44" stroke-width="2">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                    <line x1="3" y1="6" x2="21" y2="6"/>
+                    <path d="M16 10a4 4 0 0 1-8 0"/>
+                </svg>
+            </button>
+        </div>
+    </nav>
+    <!-- Overlay do carrinho -->
+    <div class="carrinho-wrap">
+        <div class="overlay-carrinho" id="overlay-carrinho"></div>
+        <!-- Sidebar do carrinho -->
+        <div class="sidebar-carrinho" id="sidebar-carrinho">
+           <div class="header-carrinho">
+               <h2>Sacola de Discos</h2>
+               <button class="botao-fechar-carrinho" id="botao-fechar">
+                   <svg viewBox="0 0 24 24" width="24" height="25" class="icone-carrinho">
+                       <line x1="18" y1="6" x2="6" y2="18"/>
+                       <line x1="6" y1="6" x2="18" y2="18"/>
+                   </svg>
+               </button>
+           </div>
+           <!-- Corpo do carrinho -->
+           <div class="corpo-carrinho">
+               <a href="../discos/paranoid-1970.html">
+                    <div class="item-carrinho">
+                        <img src="../img/ParanoidBlackSabbath.jpg" alt="Produto" class="item-imagem">
+                        <div class="item-detalhes">
+                            <h3>Paranoid - Black Sabbath</h3>
+                            <p>R$149,90</p>
+                        </div>
+                   </div>
+               </a>
+               <a href="../discos/skeleta-2025.html">
+                   <div class="item-carrinho">
+                        <img src="../img/SkeletaGhost.jpg" alt="Produto" class="item-imagem">
+                        <div class="item-detalhes">
+                            <h3>Skeleta - Ghost</h3>
+                            <p>R$349,90</p>
+                        </div>
+                    </div>
+               </a>
+           </div>
+           <!-- Rodape do carrinho -->
+            <div class="rodape-carrinho">
+               <div class="total-carrinho">
+                    <span>Total: </span>
+                    <span>R$409,80</span>
+               </div>
+               <a href="checkout.html" class="botao-checkout">Ir para Checkout</a>
+            </div>
+        </div>    
+    </div>
+    
+    <footer class="footer-informacoes">
+        <div class="footer-interno">
+            <a href="../">
+                <span class="footer-nome">Lado b</span>
+            </a>
+            <div class="links-footer">
+                <a href="../discos/" class="item-nav">Discos</a>
+                <a href="https://github.com/enzomonoo" class="item-nav">Github</a>
+                <a href="https://www.ifspcjo.edu.br/" class="item-nav">IFSP - CJO</a>
+                <a href="../generos/index.html" class="item-nav">Contato</a>
+                <a href="../perfil/index.html" class="item-nav">Perfil</a>
+                <a href="../sobre/index.html" class="item-nav">Sobre</a>
+            </div>
+            <div class="footer-direita">
+                <span class="footer-copyright">2026 - Enzo Monoo</span>
+            </div>
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <script type="text/javascript" src="../js/carrinho.js"></script>
+</body>
+</html>
+
+<!-- 0% IA -->

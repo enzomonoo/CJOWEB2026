@@ -1,5 +1,5 @@
 :root{
-    /*vars para as cores, nao usar para RGBA*/
+    /*Vars para as cores, nao usar para RGBA*/
     --preto : #1B2021;
 	--cinza : #30343F;
 	--vermelho : #89023E;
@@ -161,12 +161,12 @@ main, .disco-container {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    text-align: left;
 }
 
 .botao-add-carrinho {
     position: relative;
-    background: #1e293b;
+    background: var(--cor1);
     color: white;
     border: none;
     border-radius: 12px;
