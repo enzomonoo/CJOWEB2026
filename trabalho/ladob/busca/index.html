@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TEMPLATE</title>
+    <title>Busca...</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/busca.css">
+    <link rel="stylesheet" href="../css/principal.css">
     <link rel="icon" href="../img/logo.png">
 </head>
 <body>
@@ -16,7 +18,7 @@
         <!-- Links da Nav Bar -->
         <div class="links-nav">
             <a href="../discos/index.html" class="item-nav">Discos</a>
-            <a href="../procurar/index.html" class="item-nav">Procurar</a>
+            <a href="#" class="item-nav">Procurar</a>
             <a href="../artistas/index.html" class="item-nav">Artistas</a>
             <a href="../generos/index.html" class="item-nav">Gêneros</a>
             <a href="../perfil/index.html" class="item-nav">Perfil</a>
@@ -78,7 +80,116 @@
             </div>
         </div>    
     </div>
-    
+    <!-- Barra de pesquisa -->
+    <div class="display-busca">
+        <div class="barra-pesquisa">
+            <div class="container-tag" id="containerTag">
+                <div class="tag">Hard Rock <span class="remover-tag" onclick="this.parentElement.remove()">×</span></div>
+                <input type="text" id="inputTag" placeholder="Digite e pressione Enter...">
+            </div>
+            <p class="texto-ajuda">Pressione Enter para adcionar Tags</p>
+        </div>
+        <div class="resultado-pesquisa">
+            <section class="display-discos" aria-label="Discos">
+            <article class="card-disco">
+
+                <a href="../discos/template.html" class="capa-disco">
+                    <img src="../img/ParanoidBlackSabbath.jpg" alt="Capa do albúm Paranoid">
+                </a>
+                <div class="info-disco">
+                    <a href="../artistas/black-sabbath.html">
+                        <p class="artista-disco">Black Sabbath</p>
+                    </a>
+                    <h2><a href="../discos/paranoid-1970.html">Paranoid - 1970</a></h2>
+                    <p class="detalhes-disco">LP | 12'' | Stereo | Alemanha</p>
+
+                    <ul class="tags-genero" aria-label="Gêneros">
+                        <li>Heavy Metal</li>
+                        <li>Hard Rock</li>
+                        <li>Metal Clássico</li>
+                    </ul>
+
+                    <div class="rodape-card">
+                        <span class="preco-disco">R$149,90</span>
+                    </div>
+                </div>
+            </article>
+            <article class="card-disco">
+
+                <a href="../discos/reisereise-2004.html" class="capa-disco">
+                    <img src="../img/ReiseReiseRammstein.jpg" alt="Capa do albúm Reise Reise">
+                    <span class="selo-disco">Novo!</span>
+                </a>
+                <div class="info-disco">
+                    <a href="../artistas/rammstein.html">
+                        <p class="artista-disco">Rammstein</p>
+                    </a>
+                    <h2><a href="../discos/reisereise-2004.html">Reise Reise - 2004</a></h2>
+                    <p class="detalhes-disco">2x LP | 12'' | Stereo | Alemanha</p>
+
+                    <ul class="tags-genero" aria-label="Gêneros">
+                        <li>Metal Indústrial</li>
+                        <li>Hard Rock</li>
+                        <li>Eletrônica</li>
+                    </ul>
+
+                    <div class="rodape-card">
+                        <span class="preco-disco">R$199,90</span>
+                    </div>
+                </div>
+            </article>
+            <article class="card-disco">
+                
+                <a href="../discos/skeleta-2025.html" class="capa-disco">
+                    <img src="../img/SkeletaGhost.jpg" alt="Capa do albúm Skeleta">
+                    <span class="selo-disco">Novo!</span>
+                </a>
+                <div class="info-disco">
+                    <a href="../artistas/ghost.html">
+                        <p class="artista-disco">Ghost</p>
+                    </a>
+                    <h2><a href="../discos/skeleta-2025.html">Skeletá - 2025</a></h2>
+                    <p class="detalhes-disco">LP | 12'' | Stereo | Suécia</p>
+
+                    <ul class="tags-genero" aria-label="Gêneros">
+                        <li>Rock de Arena</li>
+                        <li>Hard Rock</li>
+                        <li>Heavy Metal</li>
+                    </ul>
+
+                    <div class="rodape-card">
+                        <span class="preco-disco">R$349,90</span>
+                    </div>
+                </div>
+            </article>
+            <article class="card-disco">
+
+                <a href="../discos/gatesofmetalfriedchickenofdeath-2005.html" class="capa-disco">
+                    <img src="../img/GatesOfMetalFriedChickenOfDeathMassacration.jpg" alt="Capa do albúm Gates of Metal Fried Chicken of Death">
+                    <span class="selo-disco">Novo!</span>
+                </a>
+                <div class="info-disco">
+                    <a href="../artistas/massacration.html">
+                        <p class="artista-disco">Massacration</p>
+                    </a>
+                    <h2><a href="../discos/gatesofmetalfriedchickenofdeath-2005.html">Gates of Metal Fried Chicken of Death - 2005</a></h2>
+                    <p class="detalhes-disco">LP | 12'' | Mono | Brasil</p>
+
+                    <ul class="tags-genero" aria-label="Gêneros">
+                        <li>Paródia</li>
+                        <li>Heavy Metal</li>
+                        <li>Hard Rock</li>
+                    </ul>
+
+                    <div class="rodape-card">
+                        <span class="preco-disco">R$249,90</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../js/tagBusca.js"></script>
     <footer class="footer-informacoes">
         <div class="footer-interno">
             <a href="../">

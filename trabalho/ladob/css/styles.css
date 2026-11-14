@@ -318,11 +318,16 @@ a {
     align-items: center;
 }
 
-@media (max-width:900px){
-    .footer-interno{
+@media (max-width:900px) {
+    .footer-interno {
         flex-direction:column;align-items:flex-start
     }
-    .footer-direita{
+    .footer-direita {
         width:100%;justify-content:space-between
+    }
+    .links-nav {
+           font-size: 2.5vw;
+           margin: 0;
+           padding: 0;
     }
 }

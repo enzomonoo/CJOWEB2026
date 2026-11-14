@@ -1,0 +1,95 @@
+:root{
+    /*Vars para as cores, nao usar para RGBA*/
+    --preto : #1B2021;
+	--cinza : #30343F;
+	--vermelho : #89023E;
+	--rosa : #EA638C;
+    --branco : #FFD9DA;
+}
+
+.display-busca {
+    display: grid;
+    grid-template-columns: auto 45vw;
+    margin: 3vw 7vw;
+}
+
+.barra-pesquisa {
+    position: sticky;
+    z-index: 999;
+    margin-top: 3vh;
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    width: 35vw;
+}
+
+.container-tag {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    border: 1px solid var(--rosa);
+    padding: 8px;
+    border-radius: 8px;
+    min-height: 45px;
+    background: rgba(27, 32,33, 0.65);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+}
+
+.container-tag:focus-within {
+    border-color: var(--rosa);
+    box-shadow: 0 0 0 3px rgba(234, 99, 140, 0.1);
+}
+
+.tag {
+    font-weight: 700;
+    color: var(--branco);
+    background: rgba(234, 99, 140, 0.5);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.remover-tag {
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 1;
+    color: var(--rosa);
+}
+
+#inputTag {
+    color: var(--rosa);
+    font-weight: 700;
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 1rem;
+    min-width: 120px;
+    padding: 4px;
+    background: transparent;
+}
+
+.texto-ajuda {
+    color: var(--rosa);
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+
+.resultado-pesquisa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 900px) {
+    .display-busca {
+        grid-template-columns: 1fr;
+    }
+
+    .barra-pesquisa {
+        width: 100%;
+    }
+
+}
